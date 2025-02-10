@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Amor.avif">
+
+</head>
+<body>
+    <div class="container">
+        <div id="pregunta">
+            <h1 class="title">¿Quieres ser mi San Valentín?</h1>
+            <img src="Snapchat-1795154697.jpg" alt="Rosas de San Valentín" class="image">
+            <div class="buttons">
+                <button class="btn btn-si" onclick="decirSi()">¡Sí! 💖</button>
+                <button class="btn btn-no" onmouseover="moverNo(this)">No 💔</button>
+            </div>
+        </div>
+
+        <div id="resultado">
+            <div class="heart">❤️</div>
+            <h2 class="title">¡Sabía que dirías que sí! 💑</h2>
+            <p class="question">¡Seremos muy felices juntos!</p>
+        </div>
+
+        <div class="footer">
+            Hecho con ❤️ para ti
+        </div>
+    </div>
+
+    <script>
+        function moverNo(btn) {
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.position = 'fixed';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function decirSi() {
+            document.getElementById('pregunta').style.display = 'none';
+            document.getElementById('resultado').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
